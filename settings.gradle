@@ -1,0 +1,3 @@
+include ':okhttptoretrofit'
+include ':app'
+rootProject.name = "StreamDemo"

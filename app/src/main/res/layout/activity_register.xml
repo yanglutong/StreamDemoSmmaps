@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:background="@mipmap/register_images" />
+    <TextView
+        android:id="@+id/tvtishi"
+        android:layout_below="@id/iv"
+        android:text="绑定提示"
+        android:textColor="#2354DF"
+        android:gravity="center"
+        android:textSize="@dimen/x25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:textSize="@dimen/x15"
+        android:id="@+id/ttt"
+        android:textColor="#000000"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="@dimen/x10"
+        android:text="①绑定完成后,用户只能在本手机使用此APP"
+        android:layout_marginLeft="@dimen/x40"
+        android:layout_below="@+id/tvtishi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:layout_marginRight="@dimen/x20"
+        android:id="@+id/tv21"
+        android:textColor="#000000"
+        android:layout_marginTop="@dimen/x10"
+        android:textSize="@dimen/x15"
+        android:text="②若更换操作手机,请联系厂家重新绑定,否则此App在新操作手机上无法使用"
+        android:layout_marginLeft="@dimen/x40"
+        android:layout_below="@+id/ttt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <RelativeLayout
+        android:id="@+id/re_1"
+        android:layout_below="@+id/ttt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_marginRight="40dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/user" />
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/et_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:background="@null"
+            android:hint="" />
+    </RelativeLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/view1"
+        android:layout_below="@+id/re_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginRight="40dp"
+        android:background="@color/hui" />
+
+    <RelativeLayout
+        android:id="@+id/re_2"
+        android:layout_below="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginRight="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/password" />
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/et_pwd"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:background="@null"
+            android:hint=""
+            android:inputType="textPassword" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_show"
+            android:layout_width="28dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/showpassword" />
+    </RelativeLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/view2"
+        android:layout_below="@+id/re_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginRight="40dp"
+        android:background="@color/hui" />
+    <LinearLayout
+        android:id="@+id/liner1"
+        android:layout_below="@+id/view2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="@dimen/x40"
+        android:layout_marginRight="40dp"
+        >
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/bt_login"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x40"
+            android:background="@mipmap/loginbutton"
+            android:text="绑定"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x40"
+            android:background="@mipmap/loginbutton"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:visibility="gone"
+        android:textSize="15dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+
+        android:textColor="@color/gray_black"
+        android:id="@+id/tv_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tvversion" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="--- 河北三明通信股份有限公司 ---"
+        android:textColor="@color/hui"
+        android:textSize="15dp" />
+</RelativeLayout>

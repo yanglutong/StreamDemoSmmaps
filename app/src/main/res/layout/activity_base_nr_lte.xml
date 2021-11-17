@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lte_nr.BaseNrLteActivity">
+    <RelativeLayout
+        android:background="@drawable/base_message_shape"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x30">
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/gg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@drawable/base_message_shape"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/finsh"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@mipmap/backnew" />
+
+        <TextView
+            android:id="@+id/mytitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="center"
+            android:text="LTE/NR基站信息"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/x16" />
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/add"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/gg"
+        android:background="@drawable/base_message_shape"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x26">
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        app:tabRippleColor = "@android:color/transparent"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_below="@+id/gg"
+        android:id="@+id/tab"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x26"
+        app:tabBackground="@drawable/base_msg_tab">
+        <TextView
+            android:id="@+id/sim1"
+            android:text="卡槽1"
+            android:background="@mipmap/base_nr_tab"
+            android:textColor="#01E6FC"
+            android:gravity="center"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x20">
+        </TextView>
+        <TextView
+            android:id="@+id/sim2"
+            android:gravity="center"
+            android:background="@mipmap/base_nr_tab"
+            android:layout_marginLeft="@dimen/x5"
+            android:text="卡槽2"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x20">
+        </TextView>
+
+
+    </LinearLayout>
+    <com.example.location.Utils.MyViewPager
+        android:id="@+id/vp"
+        android:layout_below="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.example.location.Utils.MyViewPager>
+</RelativeLayout>
